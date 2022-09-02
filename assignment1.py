@@ -30,3 +30,12 @@ future = int(input('Skriv in när alarm går '))
 summa = time + future
 alarm = summa%24
 print(f'larmet går {alarm}.00')
+7.
+tal = int(input('type a number '))
+if tal < 0:
+    print(f'{tal} is negative')
+elif tal == 0:
+    print(f'{tal} is zero')
+else:
+    print(f'{tal} is positive')
+    
