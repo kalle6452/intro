@@ -24,3 +24,9 @@ r = r**3
 x = 4/3
 v = x*math.pi*r
 print(round(v,1))
+6.
+time = int(input('Skriv in tiden '))
+future = int(input('Skriv in när alarm går '))
+summa = time + future
+alarm = summa%24
+print(f'larmet går {alarm}.00')
