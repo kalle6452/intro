@@ -17,6 +17,15 @@ F = float(input('Skriv in temperatur i fahrenheit '))
 x = 9/5
 C = (F - 32)/x
 print(C)
+4.
+savings = 1000
+interest = 1.09
+years = 5
+x = 0
+for i in range(years):
+    x = savings * interest
+    savings = x
+print(round(x))
 5.
 import math
 r = int(input('Skriv in radien'))
