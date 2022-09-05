@@ -9,6 +9,14 @@ x.center(3)
 print(x.center(7))
 print(y.center(10))
 1. c
+for i in range(26):
+    print('=',end='')
+print()
+print('|                        |')
+print('|  Knowledge is power!   |')
+print('|                        |')
+for i in range(26):
+    print('=',end='')
 2.
 x = input('Write a line of text: ')
 print('Quote: ' + f'"{x}"')
