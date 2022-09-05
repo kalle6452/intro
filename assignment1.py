@@ -55,7 +55,32 @@ elif tal == 0:
     print(f'{tal} is zero')
 else:
     print(f'{tal} is positive')
+10.
+a = 132
+b = 153
+c = 1723
+if a > b and a > c:
+  print(f'största talet är {a}')
+elif b > a and b > c:
+  print(f'största talet är {b}')
+else:
+  print(f'största talet är {c}')
 11.
+import random
+talx = 0
+tal = random.randint(-10, 10)
+#print(tal)
+talx = tal % 2
+#print(talx)
+if talx == 0 and tal < 0:
+  print(f'{tal} är jämnt och negativt')
+elif talx == 0 and tal > 0:
+  print(f'{tal} är jämnt och positivt')
+elif talx != 0 and tal > 0:
+  print(f'{tal} är udda och positivt')
+else:
+  print(f'{tal} är udda och negativt')
+12.
 first = input('Write first name.')
 second = input('Write second name.')
 last = input('Write last name.')
