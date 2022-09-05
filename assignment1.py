@@ -43,3 +43,19 @@ first = input('Write first name.')
 second = input('Write second name.')
 last = input('Write last name.')
 print(f'{first[0]}. {second[0]}. {last[0:-1]}')
+13.
+dag = input('Skriv in en veckodag på svenska.')
+if dag == 'söndag':
+    print('Sunday')
+elif dag == 'måndag':
+    print('Monday')
+elif dag == 'tisdag':
+    print('Tuesday')
+elif dag == 'onsdag':
+    print('Wednesday')
+elif dag == 'torsdag':
+    print('Thursday')
+elif dag == 'fredag':
+    print('Friday')
+elif dag == 'lördag':
+    print('Saturday')
