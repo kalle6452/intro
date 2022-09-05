@@ -116,3 +116,22 @@ while nummer:
     print(nummer)
     #print(number / 10)
 print(summa)
+8.
+lista = [1,2,5,10,20,50,100,200,500,1000]
+lista.reverse()
+pris = 123
+round(pris)
+start = 1000
+skuld = 0
+x = 0
+while skuld < pris:
+    for i in lista:
+        skuld += lista[x]
+
+        if skuld > pris:
+            skuld -= lista[x]
+            x += 1
+            print(x)
+        elif x == 9:
+            x = 0
+print(start-skuld)
