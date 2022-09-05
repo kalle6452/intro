@@ -76,3 +76,18 @@ elif dag == 'fredag':
     print('Friday')
 elif dag == 'lördag':
     print('Saturday')
+    
+    
+    Very good
+7.
+nummer = 12345
+summa = 0
+while nummer:
+    # Lägger till den sista integern i summa.
+    summa += nummer % 10
+    print(summa)
+    # Tar bort den sista integern från number.
+    nummer //= 10
+    print(nummer)
+    #print(number / 10)
+print(summa)
