@@ -38,4 +38,8 @@ elif tal == 0:
     print(f'{tal} is zero')
 else:
     print(f'{tal} is positive')
-    
+11.
+first = input('Write first name.')
+second = input('Write second name.')
+last = input('Write last name.')
+print(f'{first[0]}. {second[0]}. {last[0:-1]}')
