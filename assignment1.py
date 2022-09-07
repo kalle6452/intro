@@ -154,3 +154,39 @@ elif income > 50000:
     income = income * 0.1
     taxed += income
     print(f'skatt: {round(taxed)}')
+    15.
+ # att göra.
+# gör där det finns två och en lösning.
+from math import sqrt
+a = float(input('första talet '))
+b = float(input('andra talet '))
+c = float(input('sista talet '))
+sol = b**2-4*a*c
+sol = sqrt(sol)
+sol1 = b**2-4*a*c
+sol1 = -sqrt(sol1)
+print(sol)
+if sol < 0:
+    print('inga reella lösningar ')
+elif sol == 0:
+    sol += -b
+    print(sol)
+    print(2*a)
+    nämnare = 2*a
+    print(sol/nämnare)
+    sol = sol/nämnare
+    sol1 += -b
+    sol1 = sol1/nämnare
+    print(f'en reell lösning {sol},{sol1}')
+elif sol > 0:
+    sol += -b
+    print(sol)
+    print(2*a)
+    nämnare = 2*a
+    print(sol/nämnare)
+    sol = sol/nämnare
+    sol1 += -b
+    sol1 = sol1/nämnare
+    print(f'två reella lösningar. {sol},{sol1}')
+else:
+    print('error')
