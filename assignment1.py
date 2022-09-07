@@ -135,3 +135,22 @@ while skuld < pris:
         elif x == 9:
             x = 0
 print(start-skuld)
+14.
+income = int(input('Skriv in värdet som ska skattas '))
+if income < 38000:
+    taxed = income*0.3
+    print(f'skatt: {round(taxed)}')
+elif 38000 <= income <= 50000:
+    taxed = income*0.3
+    income = income - 38000
+    income = income * 0.05
+    taxed += income
+    #0.05
+    print(f'skatt: {round(taxed)}')
+elif income > 50000:
+    taxed = income*0.3
+    taxed += 12000 * 0.05
+    income = income - 50000
+    income = income * 0.1
+    taxed += income
+    print(f'skatt: {round(taxed)}')
