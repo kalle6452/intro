@@ -105,35 +105,35 @@ elif dag == 'lördag':
     
     Very good
 7.
-nummer = 12345
+nummer = int(input('skriv in valfri siffra. '))
 summa = 0
 while nummer:
-    # Lägger till den sista integern i summa.
     summa += nummer % 10
-    print(summa)
-    # Tar bort den sista integern från number.
     nummer //= 10
-    print(nummer)
-    #print(number / 10)
 print(summa)
 8.
 lista = [1,2,5,10,20,50,100,200,500,1000]
 lista.reverse()
-pris = 123
+pris = 372
 pris = round(pris)
 start = 1000
 skuld = 0
-x = 0
+plats = 0
+antal = 0
 while skuld < pris:
     for i in lista:
-        skuld += lista[x]
-
+        skuld += lista[plats]
+        antal += 1
         if skuld > pris:
-            skuld -= lista[x]
-            x += 1
-            print(x)
-        elif x == 9:
-            x = 0
+            skuld -= lista[plats]
+            plats += 1
+            print(lista[plats])
+        elif plats == 9:
+            plats = 0
+        elif skuld == pris:
+            break
+print(f'Change: {start-skuld} kr')
+print(f'{antal} bills/coins required')
 print(start-skuld)
 14.
 income = int(input('Skriv in värdet som ska skattas '))
@@ -155,38 +155,19 @@ elif income > 50000:
     taxed += income
     print(f'skatt: {round(taxed)}')
     15.
- # att göra.
-# gör där det finns två och en lösning.
-from math import sqrt
+import math
 a = float(input('första talet '))
 b = float(input('andra talet '))
 c = float(input('sista talet '))
-sol = b**2-4*a*c
-sol = sqrt(sol)
-sol1 = b**2-4*a*c
-sol1 = -sqrt(sol1)
-print(sol)
-if sol < 0:
-    print('inga reella lösningar ')
-elif sol == 0:
-    sol += -b
-    print(sol)
-    print(2*a)
-    nämnare = 2*a
-    print(sol/nämnare)
-    sol = sol/nämnare
-    sol1 += -b
-    sol1 = sol1/nämnare
-    print(f'en reell lösning {sol},{sol1}')
-elif sol > 0:
-    sol += -b
-    print(sol)
-    print(2*a)
-    nämnare = 2*a
-    print(sol/nämnare)
-    sol = sol/nämnare
-    sol1 += -b
-    sol1 = sol1/nämnare
-    print(f'två reella lösningar. {sol},{sol1}')
-else:
-    print('error')
+sol = (b**2) - (4*a*c)
+try:
+    sol1 = (-b-math.sqrt(sol))/(2*a)
+    sol2 = (-b+math.sqrt(sol))/(2*a)
+    if sol1 != sol2:
+        print(f'Det finns två reella lösningar, {sol1},{sol2}')
+    elif sol1 == sol2:
+        print(f'Det finns en reell lösning, {sol1}')
+except ValueError:
+        print('Det finns inga reella lösningar.')
+#print('The solution are {0} and {1}'.format(sol1,sol2))
+#print(sol1,sol2)
