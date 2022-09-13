@@ -14,3 +14,14 @@ for i in range(0,100):
 
 print(sum)
 3.
+tal = int(input('skriv in ett tal '))
+summa = 0
+if tal < 0:
+    print('Endast positiva heltal är tillåtna.')
+for i in range(0,tal):
+    if i%2==0:
+        summa += i
+        if summa > tal:
+            print(i-2)
+            break
+4.
