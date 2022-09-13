@@ -24,4 +24,15 @@ for i in range(0,tal):
         if summa > tal:
             print(i-2)
             break
-4.
+4. Primtal ofärdig
+primtal = int(input('skriv in antal primtal '))
+counter = 0
+for num in range(2, 101):
+    if counter < primtal:
+        if all(num % i != 0 for i in range(2, num)):
+            if counter%10==0 and counter != 0:
+                #print(counter)
+                print(num)
+            else:
+                print(num,end=' ')
+            counter += 1
