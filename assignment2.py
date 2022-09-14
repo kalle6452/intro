@@ -36,3 +36,26 @@ for num in range(2, 99999999):
             else:
                 print(num,end=' ')
             counter += 1
+5.
+import random
+x = 0
+faces = {1:[],2:[],3:[],4:[],5:[],6:[]}
+for i in range(0,5242880):
+    x = random.randint(1,6)
+    #print(x)
+    faces[x] += [1]
+print(faces)
+print(faces.values())
+print(faces.keys())
+#print(faces[1].count(1))
+#print(faces[2].count(1))
+lista = []
+for i in range(1,7):
+    #print(faces[i].count(1))
+    lista.append(faces[i].count(1))
+print(max(lista))
+svar = max(lista)
+svar1 = min(lista)
+svar3 = max(lista) - min(lista)
+svar4 = svar3/max(lista)
+print(svar4*100)
