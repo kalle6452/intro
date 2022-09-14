@@ -59,3 +59,17 @@ svar1 = min(lista)
 svar3 = max(lista) - min(lista)
 svar4 = svar3/max(lista)
 print(svar4*100)
+5.1
+import random
+x = 0
+rolls = 2621440
+faces = {1:[],2:[],3:[],4:[],5:[],6:[]}
+for i in range(0,rolls):
+    x = random.randint(1,6)
+    faces[x] += [1]
+lista = []
+for i in range(1,7):
+    lista.append(faces[i].count(1))
+svar = (max(lista) - min(lista))/max(lista)
+svar *= 100
+print(f'om man kastar tärningen {rolls} är skillnaden {svar}%')
