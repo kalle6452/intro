@@ -27,10 +27,10 @@ for i in range(0,tal):
 4. Primtal ofärdig
 primtal = int(input('skriv in antal primtal '))
 counter = 0
-for num in range(2, 101):
+for num in range(2, 99999999):
     if counter < primtal:
         if all(num % i != 0 for i in range(2, num)):
-            if counter%10==0 and counter != 0:
+            if counter%9==0 and counter != 0:
                 #print(counter)
                 print(num)
             else:
