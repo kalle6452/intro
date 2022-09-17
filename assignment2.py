@@ -116,3 +116,22 @@ while n:
         odd += 1
     n //= 10
 print(f'jämna: {even}, udda: {odd}, noll: {zero}')
+9.
+import random
+n = random.randint(0,3)
+def pronoun(n):
+    n = random.randint(0,3)
+    dic = {0:'I', 1:'You', 2:'It', 3:'We', 4:'They'}
+    z = dic.get(n)
+    return z
+def verb(n):
+    dic = {0: 'see', 1: 'eat', 2: 'pull', 3: 'touch', 4: 'smell'}
+    x = dic.get(n)
+    return x
+def noun(n):
+    dic = {0: 'house', 1: 'car', 2: 'computer', 3: 'tree', 4: 'bike'}
+    y = dic.get(n)
+    return y
+for i in range(0,10):
+    n = random.randint(0, 3)
+    print(f'{pronoun(n)} will {verb(n)} a {noun(n)}')
