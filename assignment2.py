@@ -79,19 +79,22 @@ störst = 0
 minst = 0
 alla = 0
 n = int(input('Skriv in hur många siffror som ska skrivas ut '))
-print('Genererade tal:',end=' ')
-for i in range(n):
-    tal = random.randint(1,100)
-    print(tal, end=' ')
-    if i == 0:
-        störst += tal
-        alla += tal
-        minst += tal
-    else:
-        alla += tal
-        if tal > störst:
-            störst = tal
-        elif tal < minst:
-            minst = tal
-print()
-print(f'störst, minst, genomsnitt: {störst}, {minst}, {alla/n}')
+if n < 0:
+    print('Var vänlig skriv in ett positivt tal. ')
+else:
+    print('Genererade tal:',end=' ')
+    for i in range(n):
+        tal = random.randint(1,100)
+        print(tal, end=' ')
+        if i == 0:
+            störst += tal
+            alla += tal
+            minst += tal
+        else:
+            alla += tal
+            if tal > störst:
+                störst = tal
+            elif tal < minst:
+                minst = tal
+    print()
+    print(f'störst, minst, genomsnitt: {störst}, {minst}, {alla/n}')
