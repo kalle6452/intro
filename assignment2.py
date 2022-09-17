@@ -135,3 +135,42 @@ def noun(n):
 for i in range(0,10):
     n = random.randint(0, 3)
     print(f'{pronoun(n)} will {verb(n)} a {noun(n)}')
+10.
+import random
+n = random.randint(0,100)
+t = random.randint(0,100)
+print(n)
+print(t)
+def inc(n):
+    return n+1
+def inc_with(n,t):
+    return n+t
+def dec(n):
+    return n-1
+def dec_with(n,t):
+    return n-t
+def greatest(n,t):
+    if n > t:
+        return n
+    else:
+        return t
+def is_even(n):
+    if n%2==0:
+        return True
+    else:
+        return False
+def power(n,t):
+    return n**t
+def fac(n):
+    fac = 1
+    for i in range(1,n+1):
+        fac = fac*i
+    return fac
+print(f'{n}+1 = {inc(n)}')
+print(f'{n}-1 = {dec(n)}')
+print(f'{n}+{t} = {inc_with(n,t)}')
+print(f'{n}-{t} = {dec_with(n,t)}')
+print(f'största värdet: {n} eller {t}? svar: {greatest(n,t)}')
+print(f'är {n} jämnt? svar: {is_even(n)}')
+print(f'{n} upphöjt till {t}: {power(n,t)}')
+print(f'{3} factorial: {fac(3)}')
