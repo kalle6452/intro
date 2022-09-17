@@ -174,3 +174,10 @@ print(f'största värdet: {n} eller {t}? svar: {greatest(n,t)}')
 print(f'är {n} jämnt? svar: {is_even(n)}')
 print(f'{n} upphöjt till {t}: {power(n,t)}')
 print(f'{3} factorial: {fac(3)}')
+11.
+x1 = int(input('xkoordinat ett '))
+y1 = int(input('ykoordinat ett '))
+x2 = int(input('xkoordinat två '))
+y2 = int(input('ykoordinat två '))
+distance = ((x1 - x2)**2 + (y1 - y2)**2)**0.5
+print(f'avståndet mellan ({x1}.0,{y1}.0) till ({x2}.0,{y2}.0) är {round(distance,3)}')
