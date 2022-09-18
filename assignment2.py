@@ -181,3 +181,19 @@ x2 = int(input('xkoordinat två '))
 y2 = int(input('ykoordinat två '))
 distance = ((x1 - x2)**2 + (y1 - y2)**2)**0.5
 print(f'avståndet mellan ({x1}.0,{y1}.0) till ({x2}.0,{y2}.0) är {round(distance,3)}')
+12.
+s = 'hej'
+def first_last(s):
+    return f'första och sista i: "{s}": {s[:1]}, {s[-1:]}'
+def char_types(s):
+    antal = 0
+    antal0 = 0
+    for i in s:
+        antal += 1
+    x = ['a','e','i','o','u','y','å','ä','ö']
+    v = [i for i in s if i in x]
+    for i in v:
+        antal0 += 1
+    return f'Det finns {antal0} vokaler och {antal-antal0} konsonanter'
+print(first_last(s))
+print(char_types(s))
