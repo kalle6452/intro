@@ -239,3 +239,14 @@ for i in range(1,100):
     x += y
 lista.sort()
 print(f'störst: {max(lista)}, minst: {min(lista)}, genomsnitt: {x/100}, näst störst: {lista[-2]}')
+17.
+import random
+suits = ['spades', 'hearts', 'diamonds', 'clubs']
+faces = ['ace']
+faces += range(2, 11)
+faces += ['jack', 'queen', 'king']
+deck = ['%s of %s'%(f, s) for f in faces for s in suits]
+print(deck)
+for i in range(0,5):
+    tal = random.randint(0, 51)
+    print(deck[tal])
