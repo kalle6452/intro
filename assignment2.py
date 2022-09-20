@@ -219,3 +219,13 @@ def symbol(s):
 print(first_last(s))
 print(char_types(s))
 print(symbol(s))
+15.
+import random
+
+lista = ['ask again later', 'yes', 'concentrate','screw you']
+
+inp = input('8-ball: ')
+while inp != 'stop':
+    i = random.randint(0,3)
+    print(lista[i])
+    inp = input('8-ball ')
