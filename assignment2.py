@@ -182,18 +182,40 @@ y2 = int(input('ykoordinat två '))
 distance = ((x1 - x2)**2 + (y1 - y2)**2)**0.5
 print(f'avståndet mellan ({x1}.0,{y1}.0) till ({x2}.0,{y2}.0) är {round(distance,3)}')
 12.
-s = 'hej'
+import string
+s = 'I am 1 with the Force, not 2...'
 def first_last(s):
     return f'första och sista i: "{s}": {s[:1]}, {s[-1:]}'
 def char_types(s):
     antal = 0
     antal0 = 0
+    antal1 = 0
     for i in s:
         antal += 1
-    x = ['a','e','i','o','u','y','å','ä','ö']
+    x = ['a','e','i','o','u','y','å','ä','ö','A', 'E', 'I', 'O', 'U', 'Y', 'Å', 'Ä', 'Ö']
     v = [i for i in s if i in x]
     for i in v:
         antal0 += 1
-    return f'Det finns {antal0} vokaler och {antal-antal0} konsonanter'
+    z = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X']
+    f = [i for i in s if i in z]
+    for i in f:
+        antal1 += 1
+    return f'Det finns {antal0} vokaler och {antal1} konsonanter'
+def symbol(s):
+    antal = 0
+    antal0 = 0
+    antal1 = 0
+    for i in s:
+        antal += 1
+    x = ['a','e','i','o','u','y','å','ä','ö','b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','A', 'E', 'I', 'O', 'U', 'Y', 'Å', 'Ä', 'Ö','B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X']
+    z = ['0','1','2','3','4','5','6','7','8','9']
+    v = [i for i in s if i in x]
+    for i in v:
+        antal0 += 1
+    f = [i for i in s if i in z]
+    for i in f:
+        antal1 += 1
+    return f'bokstäver: {antal0}, siffror: {antal1}, symboler: {antal-(antal0+antal1)}'
 print(first_last(s))
 print(char_types(s))
+print(symbol(s))
