@@ -229,3 +229,13 @@ while inp != 'stop':
     i = random.randint(0,3)
     print(lista[i])
     inp = input('8-ball ')
+16.
+import random
+lista = []
+x = 0
+for i in range(1,100):
+    y = random.randint(1,10000)
+    lista.append(y)
+    x += y
+lista.sort()
+print(f'störst: {max(lista)}, minst: {min(lista)}, genomsnitt: {x/100}, näst störst: {lista[-2]}')
