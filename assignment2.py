@@ -250,3 +250,16 @@ print(deck)
 for i in range(0,5):
     tal = random.randint(0, 51)
     print(deck[tal])
+18.
+s = 'Ni talar bra latin!'
+def is_palindrome(s):
+    import re
+    regex = re.compile(r'\s+')
+    s1 = s.lower()
+    s2 = re.sub(regex, '', s1)
+    list=['?','!','.']
+    s2="".join(i for i in s2 if i not in list)
+    s3 = s2[::-1]
+    if s2 == s3:
+        return True
+print(is_palindrome(s))
