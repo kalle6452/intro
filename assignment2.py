@@ -263,3 +263,23 @@ def is_palindrome(s):
     if s2 == s3:
         return True
 print(is_palindrome(s))
+19.
+import random
+n = 10
+def random_num_list(n):
+    lista = [random.randint(0,100) for i in range(n)]
+    return lista
+lista = random_num_list(n)
+print(f'lista: {lista}')
+def only_odd(lista):
+    lista = [i for i in lista if i%2!=0]
+    return lista
+print(f'udda: {only_odd(lista)}')
+def square(lista):
+    lista = [i**2 for i in lista]
+    return lista
+print(f'kvadrerade: {square(lista)}')
+def sublist(lista):
+    lista1 = lista[1:-1]
+    return lista1
+print(f'de i mitten: {sublist(lista)}')
