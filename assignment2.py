@@ -116,6 +116,24 @@ while n:
         odd += 1
     n //= 10
 print(f'jämna: {even}, udda: {odd}, noll: {zero}')
+8.
+age = 0
+candles = 24
+box = 1
+box_count = 0
+candle_total = 0
+while age <= 99:
+    age += 1
+    candles -= age
+    candle_total += age
+    while candles <= 0:
+        candles += 24
+        box += 1
+        box_count += 1
+        print(age, box_count)
+    box_count = 0
+print(age, candles, box, candle_total)
+print(f'Total number of boxes: {box}, Remaining candles: {candles}')
 9.
 import random
 n = random.randint(0,3)
@@ -265,7 +283,7 @@ def is_palindrome(s):
 print(is_palindrome(s))
 19.
 import random
-n = 10
+n = 5
 def random_num_list(n):
     lista = [random.randint(0,100) for i in range(n)]
     return lista
