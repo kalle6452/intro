@@ -237,6 +237,30 @@ def symbol(s):
 print(first_last(s))
 print(char_types(s))
 print(symbol(s))
+13.
+import random
+a = str(random.randint(1,9))
+b = str(random.randint(0,9))
+c = str(random.randint(0,9))
+d = str(random.randint(1,9))
+abcd = a+b+c+d
+dcba = d+c+b+a
+abcd = int(abcd)
+dcba = int(dcba)
+print(abcd)
+while 4*abcd != dcba:
+    a = str(random.randint(1, 9))
+    b = str(random.randint(0, 9))
+    c = str(random.randint(0, 9))
+    d = str(random.randint(1, 9))
+    abcd = a + b + c + d
+    dcba = d + c + b + a
+    abcd = int(abcd)
+    dcba = int(dcba)
+    if 4*abcd == dcba:
+        break
+print(abcd)
+print(dcba)
 15.
 import random
 
