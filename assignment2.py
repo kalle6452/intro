@@ -301,3 +301,24 @@ def sublist(lista):
     lista1 = lista[1:-1]
     return lista1
 print(f'de i mitten: {sublist(lista)}')
+21.
+tal = input('Löner: ')
+lista = tal.split()
+lista = list(map(int, lista))
+x = 0
+y = len(lista)
+lista = sorted(lista)
+for i in lista:
+    x += i
+print(f'Genomsnitt: {round(x/y)}')
+index = (y - 1) // 2
+if (y % 2):
+    median = round(lista[index])
+    print(f'median: {median}')
+else:
+    median = (lista[index] + lista[index + 1])/2.0
+    median = round(median)
+    print(f'Median: {median}')
+genomsnitt = lista[-1] - lista[0]
+genomsnitt = round(genomsnitt)
+print(f'genomsnitt: {genomsnitt}')
