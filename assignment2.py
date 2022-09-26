@@ -102,17 +102,14 @@ else:
 even = 0
 odd = 0
 zero = 0
-print(1%7)
 n = int(input('skriv in ett tal '))
 while n:
-    #x = n // 10
     print(n)
-    if n%2==0:
-        if n%0.1 != 0:
-            even += 1
-        else:
-            zero += 1
-    elif n%2!=0:
+    if n % 10 == 0:
+        zero += 1
+    elif n % 2 == 0:
+        even += 1
+    else:
         odd += 1
     n //= 10
 print(f'jämna: {even}, udda: {odd}, noll: {zero}')
