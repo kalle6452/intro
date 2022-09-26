@@ -130,9 +130,9 @@ while age <= 99:
         candles += 24
         box += 1
         box_count += 1
+    if box_count != 0:
         print(age, box_count)
     box_count = 0
-print(age, candles, box, candle_total)
 print(f'Total number of boxes: {box}, Remaining candles: {candles}')
 9.
 import random
