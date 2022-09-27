@@ -245,7 +245,7 @@ dcba = d+c+b+a
 abcd = int(abcd)
 dcba = int(dcba)
 print(abcd)
-while 4*abcd != dcba:
+while 4 * abcd != dcba:
     a = str(random.randint(1, 9))
     b = str(random.randint(0, 9))
     c = str(random.randint(0, 9))
@@ -254,7 +254,7 @@ while 4*abcd != dcba:
     dcba = d + c + b + a
     abcd = int(abcd)
     dcba = int(dcba)
-    if 4*abcd == dcba:
+    if 4 * abcd == dcba:
         break
 print(abcd)
 print(dcba)
