@@ -285,7 +285,8 @@ faces = ['ace']
 faces += range(2, 11)
 faces += ['jack', 'queen', 'king']
 deck = ['%s of %s'%(f, s) for f in faces for s in suits]
-deck = random.sample(deck, 51)
+deck = random.sample(deck, 52)
+print(len(deck))
 print(deck)
 for i in range(0,5):
     tal = random.randint(0, 51)
