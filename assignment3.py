@@ -58,3 +58,17 @@ for i in dic:
         if y == i:
             dic[i] += 1
 print(dic)
+
+import random
+lst = []
+for i in range(100):
+    y = random.randint(1,10)
+    lst.append(y)
+def count_occurences(lst):
+    dic = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,}
+    for i in dic:
+        for y in lst:
+            if y == i:
+                dic[i] += 1
+    return dic
+print(count_occurences(lst))
