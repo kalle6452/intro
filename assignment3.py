@@ -34,3 +34,15 @@ while val != 4:
         path = os.getcwd()
         print(path)
     val = int(input('s '))
+11.
+import random
+lst = []
+for i in range(100):
+    f = random.randint(1,200)
+    lst.append(f)
+print(lst)
+def different(x):
+    y = set(x)
+    y = sorted(y)
+    return list(y)
+print(different(lst))
