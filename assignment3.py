@@ -46,6 +46,26 @@ def different(x):
     y = sorted(y)
     return list(y)
 print(different(lst))
+5.
+import os
+path = os.getcwd()
+filename = input("filename: ")
+print("Enter the content and end with 'stop':")
+buffer = []
+while True:
+    print("> ", end="")
+    line = input()
+    if line == "stop":
+        break
+    buffer.append(line)
+content = "\n".join(buffer)
+print("You entered...")
+print()
+print(content)
+def writing(path, filename, content):
+    with open(f'{path}\{filename}',"w") as file:
+        return file.write(content)
+print(writing(path, filename, content))
 12.
 import random
 lst = []
