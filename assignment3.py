@@ -66,6 +66,20 @@ def writing(path, filename, content):
     with open(f'{path}\{filename}',"w") as file:
         return file.write(content)
 print(writing(path, filename, content))
+6.
+import os
+path = os.getcwd()
+filename = input('skriv in valfritt filnamn: ')
+def reading(path, filename):
+    counter = 0
+    with open(f'{path}\{filename}',"r") as reader:
+        content = ''
+        for line in reader.readlines():
+            content = content + line
+            counter += 1
+        allt = f'''antal rader: {counter}\ncontent:\n{content}'''
+        return allt
+print(reading(path,filename))
 12.
 import random
 lst = []
