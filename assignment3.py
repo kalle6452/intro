@@ -80,6 +80,39 @@ def reading(path, filename):
         allt = f'''antal rader: {counter}\ncontent:\n{content}'''
         return allt
 print(reading(path,filename))
+8.
+import os
+import re
+path = os.getcwd()
+input_file = 'life_of_brian(1).txt'
+number_of_words = 0
+x = []
+# Opening our text file in read only
+# mode using the open() function
+with open(input_file, 'r') as file:
+    # Reading the content of the file
+    # using the read() function and storing
+    # them in a new variable
+    data = file.read()
+    # Splitting the data into separate lines
+    # using the split() function
+    lines = data.split()
+    print(lines)
+    #x.append(lines)
+    # Adding the length of the
+    # lines in our number_of_words
+    # variable
+    number_of_words += len(lines)
+#for i in x:
+   # print(i,'\n')
+#print(*x, sep="\n")
+print(x)
+# Printing total number of words
+print(number_of_words)
+#print(x[1])
+#with open("testfile1.txt", "x") as f:
+    #for row in x:
+       # print(", ".join(row), file=f)
 12.
 import random
 lst = []
