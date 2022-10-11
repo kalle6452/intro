@@ -81,38 +81,43 @@ def reading(path, filename):
         return allt
 print(reading(path,filename))
 8.
+# Först till lista sen till filen.
+# Listan i sig måste inte ha ett element per rad.
+# Kan använda y till den andra filen och bara göra en dålig lista
+# där varje ord är ett element.
 import os
-import re
 path = os.getcwd()
 input_file = 'life_of_brian(1).txt'
-number_of_words = 0
-x = []
-# Opening our text file in read only
-# mode using the open() function
-with open(input_file, 'r') as file:
-    # Reading the content of the file
-    # using the read() function and storing
-    # them in a new variable
-    data = file.read()
-    # Splitting the data into separate lines
-    # using the split() function
-    lines = data.split()
-    print(lines)
-    #x.append(lines)
-    # Adding the length of the
-    # lines in our number_of_words
-    # variable
-    number_of_words += len(lines)
-#for i in x:
-   # print(i,'\n')
-#print(*x, sep="\n")
-print(x)
-# Printing total number of words
-print(number_of_words)
-#print(x[1])
-#with open("testfile1.txt", "x") as f:
-    #for row in x:
-       # print(", ".join(row), file=f)
+def get_words(path, file_name):
+    number_of_words = 0
+    x = []
+    y = ''
+    # Christer middag
+    space = ' '
+    with open(input_file, 'r') as file:
+        data = file.read()
+        lines = data.split()
+        for word in lines:
+            x.append(word)
+            y += word
+            y += '\n'
+        number_of_words += len(lines)
+        return number_of_words
+print(get_words(path,input_file))
+files = 'ni.txt'
+def file_writer(path,input_file,files):
+    with open(input_file, 'r') as file:
+        x = []
+        y = ''
+        data = file.read()
+        lines = data.split()
+        for word in lines:
+            x.append(word)
+            y += word
+            y += '\n'
+    with open(f'{path}\{files}', "w") as file:
+        return file.write(y)
+print(file_writer(path,input_file,files))
 12.
 import random
 lst = []
