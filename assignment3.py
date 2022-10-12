@@ -144,3 +144,21 @@ def count_occurences(lst):
                 dic[i] += 1
     return dic
 print(count_occurences(lst))
+14.
+simple:
+import Character
+tiin = Character.Character('Saesee Tiin', 'Iktotchi', 'Iktotch')
+tiin.name
+solo = Character.Character()
+solo.name = 'Han Solo'
+solo.kind = 'Human'
+solo.planet = 'Corellia'
+print(f'{tiin.name} is a(n) {tiin.kind} from {tiin.planet}')
+print(f'{solo.name} is a(n) {solo.kind} from {solo.planet}')
+character:
+   class Character:
+    def __init__(self, name='', kind='', planet=''):
+        self.name = name
+        self.kind = kind
+        self.planet = planet
+
