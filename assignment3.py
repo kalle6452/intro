@@ -163,7 +163,6 @@ character:
         self.kind = kind
         self.planet = planet
 15.
-import random
 import re
 x = []
 import Character
@@ -171,27 +170,19 @@ with open('starwars.txt', 'r') as file:
     data = file.read()
     lines = data.split()
     for word in lines:
-        #rule = re.compile(r'^[^*$<,>?!\']*$')
         x.append(word)
-    #for word in data:
-        #rule = re.compile(r'^[^*$<,>?!\']*$')
 entire_list = re.split(r',|\n',data)
 d = 0
 names = []
 kinds = []
-# https://stackoverflow.com/questions/53320837/reading-class-objects-from-a-txt-file-in-python
 for i in entire_list:
     if d%3==0:
-        #print(i)
         names.append(i)
     d += 1
 d = 0
 counter = 1
-import pdb
-#pdb.set_trace()
 for i in entire_list:
     if d == counter and d > 0:
-        #print(i)
         kinds.append(i)
         counter += 3
     d += 1
@@ -200,29 +191,14 @@ planet = []
 counter = 2
 for i in entire_list:
     if d == counter and d > 0:
-        #print(i)
         planet.append(i)
         counter += 3
     d += 1
-print(names)
-print(kinds)
-print(planet)
-shelter = []
+lista = []
 for i in range(15):
     character = Character.Character(names[i], kinds[i], planet[i])
-    shelter.append(character)
-print(shelter)
-for i in shelter:
+    lista.append(character)
+print(lista)
+for i in lista:
     print(i)
 
-
-
-
-
-
-
-
-
-#bodies = [Character.Character("test_name", i, 1.) for i in entire_list]
-#bodies[3].L = 2
-#print(bodies[0])
