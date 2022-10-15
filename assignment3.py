@@ -81,6 +81,45 @@ def reading(path, filename):
         allt = f'''antal rader: {counter}\ncontent:\n{content}'''
         return allt
 print(reading(path,filename))
+7.
+import os
+import re
+home = os.getcwd()
+path = 'file_10k_integers_B.txt'
+path1 = 'file_10k_integers_A.txt'
+lst = []
+lst1 = []
+with open(path, "r") as file:
+    as_string = file.read()
+    string_list = as_string.split(":")
+    for s in string_list:
+        lst.append(int(s))
+with open(path1, "r") as file:
+    as_string = file.read()
+    string_list = re.split(r',|\n',as_string)
+    string_list.pop()
+    length1 = len(string_list)
+counter = 0
+while counter < length1:
+    for s in string_list:
+        lst1.append(int(s))
+        counter += 1
+def mean(lst):
+    summa = sum(lst)
+    length = len(lst)
+    mean = summa/length
+    return mean
+def get_std_dev(lst):
+    length = len(lst)
+    mean = sum(lst) / length
+    var = sum((i - mean)**2 for i in lst) / length
+    std_dev = var ** 0.5
+    return std_dev
+print('Results for file A:')
+print(f'mean = {round(mean(lst1), 1)}, sd = {round(get_std_dev(lst1), 1)}')
+print('Results for file B:')
+print(f'mean = {round(mean(lst), 1)}, sd = {round(get_std_dev(lst), 1)}')
+
 8.
 # Först till lista sen till filen.
 # Listan i sig måste inte ha ett element per rad.
