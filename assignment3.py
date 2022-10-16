@@ -60,13 +60,17 @@ for i in x:
 import random
 lst = []
 for i in range(100):
-    f = random.randint(1,200)
+    f = random.randint(1, 200)
     lst.append(f)
 print(lst)
+
+
 def different(x):
     y = set(x)
     y = sorted(y)
     return list(y)
+
+
 print(different(lst))
 5.
 import os
@@ -84,24 +88,32 @@ content = "\n".join(buffer)
 print("You entered...")
 print()
 print(content)
+
+
 def writing(path, filename, content):
-    with open(f'{path}\{filename}',"w") as file:
+    with open(f'{path}\{filename}', "w") as file:
         return file.write(content)
+
+
 print(writing(path, filename, content))
 6.
 import os
 path = os.getcwd()
 filename = input('skriv in valfritt filnamn: ')
+
+
 def reading(path, filename):
     counter = 0
-    with open(f'{path}\{filename}',"r") as reader:
+    with open(f'{path}\{filename}', "r") as reader:
         content = ''
         for line in reader.readlines():
             content = content + line
             counter += 1
         allt = f'''antal rader: {counter}\ncontent:\n{content}'''
         return allt
-print(reading(path,filename))
+
+
+print(reading(path, filename))
 7.
 import os
 import re
@@ -117,7 +129,7 @@ with open(path, "r") as file:
         lst.append(int(s))
 with open(path1, "r") as file:
     as_string = file.read()
-    string_list = re.split(r',|\n',as_string)
+    string_list = re.split(r',|\n', as_string)
     string_list.pop()
     length1 = len(string_list)
 counter = 0
@@ -125,36 +137,38 @@ while counter < length1:
     for s in string_list:
         lst1.append(int(s))
         counter += 1
+
+
 def mean(lst):
     summa = sum(lst)
     length = len(lst)
     mean = summa/length
     return mean
+
+
 def get_std_dev(lst):
     length = len(lst)
     mean = sum(lst) / length
     var = sum((i - mean)**2 for i in lst) / length
     std_dev = var ** 0.5
     return std_dev
+
+
 print('Results for file A:')
 print(f'mean = {round(mean(lst1), 1)}, sd = {round(get_std_dev(lst1), 1)}')
 print('Results for file B:')
 print(f'mean = {round(mean(lst), 1)}, sd = {round(get_std_dev(lst), 1)}')
 
 8.
-# Först till lista sen till filen.
-# Listan i sig måste inte ha ett element per rad.
-# Kan använda y till den andra filen och bara göra en dålig lista
-# där varje ord är ett element.
 import os
 path = os.getcwd()
 input_file = 'life_of_brian(1).txt'
+
+
 def get_words(path, file_name):
     number_of_words = 0
     x = []
     y = ''
-    # Christer middag
-    space = ' '
     with open(input_file, 'r') as file:
         data = file.read()
         lines = data.split()
@@ -164,9 +178,13 @@ def get_words(path, file_name):
             y += '\n'
         number_of_words += len(lines)
         return number_of_words
-print(get_words(path,input_file))
+
+
+print(get_words(path, input_file))
 files = 'ni.txt'
-def file_writer(path,input_file,files):
+
+
+def file_writer(path, input_file, files):
     with open(input_file, 'r') as file:
         x = []
         y = ''
@@ -178,7 +196,9 @@ def file_writer(path,input_file,files):
             y += '\n'
     with open(f'{path}\{files}', "w") as file:
         return file.write(y)
-print(file_writer(path,input_file,files))
+
+
+print(file_writer(path, input_file, files))
 12.
 import random
 lst = []
