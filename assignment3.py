@@ -35,6 +35,22 @@ while val != 4:
         path = os.getcwd()
         print(path)
     val = int(input('s '))
+3.
+import os
+path = os.getcwd()
+x = [name for name in os.listdir(path)
+            if os.path.isdir(os.path.join(path, name))]
+y = ''
+print(x)
+z = 0
+for i in x:
+    try:
+        subdir = os.chdir(x[z])
+        print(os.getcwd())
+        x = os.listdir(subdir)
+    except IndexError:
+        os.chdir("..")
+    z += 1
 11.
 import random
 lst = []
