@@ -43,9 +43,8 @@ while val != 4:
     val = int(input('s '))
 3.
 import os
-path = os.getcwd()
-x = [name for name in os.listdir(path)
-            if os.path.isdir(os.path.join(path, name))]
+p = os.getcwd()
+x = [name for name in os.listdir(p) if os.path.isdir(os.path.join(p, name))]
 y = ''
 print(x)
 z = 0
