@@ -176,4 +176,110 @@ class HashSet:
     def zero_bucket_ratio(self):
         pass    # Placeholder code ==> to be replaced
 
+Påbörjad geeks:
+    from dataclasses import dataclass
+from typing import List
+  
+    # Create empty bucket list of given size
+@dataclass
+class HashSet:    
+    buckets: List[List] = None
+    size: int = 0
+
+    def init(self):
+        self.size = 0
+        self.buckets = [[] for i in range(8)]
+    def create_buckets(self):
+        return [[] for _ in range(self.size)]
+  
+    def get_hash(self, word):
+        #word1 = linked.LinkedList()
+        hash = sum(ord(character) for character in repr(word))
+        length = len(self.buckets)
+        hashing = hash % length
+        return hashing
+    # Insert values into hash map
+    def add(self, word):
+        
+        # Get the index from the key
+        # using hash function
+        h = self.get_hash(word)
+        N = len(self.buckets)
+        b = h % N
+        current = self.buckets[b]   
+  
+        found_key = False
+        for index, record in enumerate(current):
+            record_key, record_val = record
+              
+            # check if the bucket has same key as
+            # the key to be inserted
+            if record_key == word:
+                found_key = True
+                break
+  
+        # If the bucket has same key as the key to be inserted,
+        # Update the key value
+        # Otherwise append the new key-value pair to the bucket
+        if found_key:
+            current[index] = (word, val)
+        else:
+            current.append((word, val))
+  
+    # Return searched value with specific key
+    def get_val(self, key):
+        
+        # Get the index from the key using
+        # hash function
+        hashed_key = hash(key) % self.size
+          
+        # Get the bucket corresponding to index
+        bucket = self.hash_table[hashed_key]
+  
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_val = record
+              
+            # check if the bucket has same key as 
+            # the key being searched
+            if record_key == key:
+                found_key = True
+                break
+  
+        # If the bucket has same key as the key being searched,
+        # Return the value found
+        # Otherwise indicate there was no record found
+        if found_key:
+            return record_val
+        else:
+            return "No record found"
+  
+    # Remove a value with specific key
+    def delete_val(self, key):
+        
+        # Get the index from the key using
+        # hash function
+        hashed_key = hash(key) % self.size
+          
+        # Get the bucket corresponding to index
+        bucket = self.hash_table[hashed_key]
+  
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_val = record
+              
+            # check if the bucket has same key as
+            # the key to be deleted
+            if record_key == key:
+                found_key = True
+                break
+        if found_key:
+            bucket.pop(index)
+        return
+  
+    # To print the items of hash map
+    def __str__(self):
+        return "".join(str(item) for item in self.hash_table)
+  
+  
 
