@@ -283,3 +283,166 @@ class HashSet:
   
   
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    from dataclasses import dataclass
+from operator import contains
+from typing import List
+import pdb
+# Håll koll på vad Linus har gjort, var beredd på att svara på frågor
+# om bst.
+from dataclasses import dataclass
+from typing import Any
+
+@dataclass
+class HashSet:
+    buckets: List[List] = None
+    size: int = 0
+    def init(self):
+        self.buckets = [[] for i in range(8)]
+        self.size = 0
+        
+    def get_hash(self, word):
+        hash = sum(ord(character) for character in repr(word))
+        length = len(self.buckets)
+        hashing = hash % length
+        return hashing
+    # Insert values into hash map
+    def rehash(self):
+        length = len(self.buckets)
+        self.buckets = [[] for i in range(length*2)]  # Placeholder code ==> to be replaced
+        print(f'length: {length}')
+        return self.buckets
+
+    def add(self, word):
+        h = self.get_hash(word)
+        N = len(self.buckets)
+        b = h % N
+        current = self.buckets[b]
+
+        found_key = False
+        for index, record in enumerate(current):
+            #record_key = record
+            
+            # check if the bucket has same key as
+            # the key to be inserted
+            if record == word:
+                found_key = True
+                break
+                #print(len(self.buckets))
+                if self.size == len(self.buckets):
+                    #print(self.size)
+                    self.buckets.append(self.get_hash(self.buckets))
+                
+        
+        # If the bucket has same key as the key to be inserted,
+        # Update the key value
+        # Otherwise append the new key-value pair to the bucket
+        if found_key:
+            pass
+            current[index] = (word)
+        else:
+            current.append(word)
+            self.size += 1
+        return 1
+    def get_size(self):
+        #self.buckets = [[] for i in range(len(self.buckets))*2]
+        #s = 1
+        #return self.buckets
+        pass
+    def contains(self, word):
+        pass 
+    def bucket_list_size(self):
+        pass
+
+    # Return searched value with specific key
+    def get_val(self, word):
+        
+        # Get the index from the key using
+        # hash function
+        hashed_key = hash(word) % self.size
+          
+        # Get the bucket corresponding to index
+        bucket = self.hash_table[hashed_key]
+  
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_val = record
+              
+            # check if the bucket has same key as 
+            # the key being searched
+            if record_key == word:
+                found_key = True
+                break
+  
+        # If the bucket has same key as the key being searched,
+        # Return the value found
+        # Otherwise indicate there was no record found
+        if found_key:
+            return record_val
+        else:
+            return "No record found"
+  
+    # Remove a value with specific key
+    def remove(self, key):
+        
+        # Get the index from the key using
+        # hash function
+        hashed_key = hash(key) % self.size
+          
+        # Get the bucket corresponding to index
+        bucket = self.hash_table[hashed_key]
+  
+        found_key = False
+        for index, record in enumerate(bucket):
+            record_key, record_val = record
+              
+            # check if the bucket has same key as
+            # the key to be deleted
+            if record_key == key:
+                found_key = True
+                break
+        if found_key:
+            bucket.pop(index)
+        return
+    def to_string(self):
+        pass
+        #return "".join(str(item) for item in self.hash_table)
+    # To print the items of hash map
+  
+    def max_bucket_size(self):
+        pass
+    def zero_bucket_ratio(self):
+        pass 
+
+  
+# insert some values
+
+
+#hash_table.set_val('gfg@example.com')
+#print(hash_table.to_string())
+'''print() 
+  
+hash_table.set_val('portal@example.com', 'some other value')
+print(hash_table)
+print()
+  
+# search/access a record with key
+print(hash_table.get_val('portal@example.com'))
+print()
+  
+# delete or remove a value
+hash_table.delete_val('portal@example.com')
+print(hash_table)'''
